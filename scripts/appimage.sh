@@ -104,6 +104,9 @@ patch_desktop_files
 
 make install DESTDIR="${BUILD_BASE}/${APP}.AppDir" >/dev/null
 
+# Remove the libraries that make added.
+rm -rf "${BUILD_BASE}/${APP}.AppDir/usr/lib"
+
 # Create Appimage
 make_appimage
 
