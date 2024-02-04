@@ -14,11 +14,12 @@ export CFLAGS="-Wno-deprecated-declarations"
 typeset -a CFG_OPTS
 CFG_OPTS+=( "--disable-perlinterp" )
 CFG_OPTS+=( "--disable-pythoninterp" )
+CFG_OPTS+=( "--disable-python3interp" )
 CFG_OPTS+=( "--without-python3-stable-abi" )
 CFG_OPTS+=( "--disable-rubyinterp" )
 CFG_OPTS+=( "--disable-luainterp" )
 CFG_OPTS+=( "--disable-tclinterp" )
-CFG_OPTS+=( "--disable-cscope" )
+CFG_OPTS+=( "--disable-mzschemeinterp" )
 CFG_OPTS+=( "--disable-netbeans" )
 CFG_OPTS+=( "--prefix=/usr" )
 
@@ -33,7 +34,7 @@ shopt -u nullglob
 
 cd "${SRCDIR}"
 
-# Build Vim - no X11
+# Build Vim - yes X11
 rm -rf vim
 SHADOWDIR=vim make -e shadow
 pushd vim
