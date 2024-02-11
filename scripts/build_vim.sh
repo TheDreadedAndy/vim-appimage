@@ -24,7 +24,7 @@ CFG_OPTS+=( "--disable-netbeans" )
 CFG_OPTS+=( "--disable-cscope" )
 CFG_OPTS+=( "--disable-canberra" )
 CFG_OPTS+=( "--disable-libsodium" )
-CFG_OPTS+=( "--enable-terminal" )
+CFG_OPTS+=( "--disable-terminal" )
 CFG_OPTS+=( "--prefix=/usr" )
 
 NPROC=$(getconf _NPROCESSORS_ONLN)
