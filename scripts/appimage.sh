@@ -102,7 +102,7 @@ GLIBC=$(find ${SOURCE_DIR} -type f -executable -exec strings {} \; | grep "^GLIB
 # Prepare some source files
 patch_desktop_files
 
-make install DESTDIR="${BUILD_BASE}/${APP}.AppDir" >/dev/null
+make install VIMPROG=$PWD/vim DESTDIR="${BUILD_BASE}/${APP}.AppDir" >/dev/null
 
 # Remove the libraries that make added.
 rm -rf "${BUILD_BASE}/${APP}.AppDir/usr/lib"
